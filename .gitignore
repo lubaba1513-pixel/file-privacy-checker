@@ -1,0 +1,16 @@
+# Local editor / operating system artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local sensitive material and generated output
+.env
+.env.*
+*.pem
+*.key
+reviewed-copy*.txt
+private-data/
+
+# Optional local tooling artifacts
+node_modules/
+coverage/
