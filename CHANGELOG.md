@@ -1,9 +1,8 @@
 # Changelog
 
-This file records implemented changes. It does not imply that GitHub release tags already exist.
+This file summarizes the features and documentation included in File Privacy Checker.
 
-## Unreleased — repository preparation
-
+## Documentation and repository setup
 - Expanded the README with screenshot, navigation, detection reference, and validation evidence.
 - Added privacy, detection, and repeatable test guides plus a fictional sample file.
 - Added MIT licensing, responsible-use guidance, security reporting, and contributor instructions.
@@ -12,7 +11,7 @@ This file records implemented changes. It does not imply that GitHub release tag
 
 The workflow is prepared for GitHub; a successful hosted run must be confirmed after upload.
 
-## v1.1
+## Interface and usability
 
 - Added side-by-side input and preview panels with a stacked layout for narrow screens.
 - Added grouped finding counts and a selected-removal badge.
@@ -20,7 +19,7 @@ The workflow is prepared for GitHub; a successful hosted run must be confirmed a
 - Added disabled export states before review.
 - Improved handling of quoted passwords/tokens and stale local file reads.
 
-## v1.0
+## Core features
 
 - Introduced local review of pasted text and `.txt` files up to 1 MiB.
 - Added email, context-sensitive phone, labeled password/token, card-checksum, and PEM private-key patterns.
