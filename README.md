@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:163F3A,100:6A5689&height=220&section=header&text=File%20Privacy%20Checker&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Review%20locally.%20Redact%20thoughtfully.%20Share%20with%20care.&descSize=17&descAlignY=58" width="100%" alt="File Privacy Checker â€” Review locally. Redact thoughtfully. Share with care." />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:163F3A,100:6A5689&height=220&section=header&text=File%20Privacy%20Checker&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Review%20locally.%20Redact%20thoughtfully.%20Share%20with%20care.&descSize=17&descAlignY=58" width="100%" alt="File Privacy Checker  -  Review locally. Redact thoughtfully. Share with care." />
 
 <div align="center">
 
@@ -15,20 +15,18 @@ Keep the useful context. Protect passwords, keys, and personal details.
 ![JavaScript](https://img.shields.io/badge/Built%20With-Vanilla%20JavaScript-D9A441?style=for-the-badge&logo=javascript&logoColor=white)
 [![License](https://img.shields.io/badge/License-MIT-1C6558?style=for-the-badge)](LICENSE)
 
-**Six automatic detectors Â· Manual redaction Â· Copy and download Â· No backend**
+**Six automatic detectors &middot; Manual redaction &middot; Copy and download &middot; No backend**
 
-[Start here](#start) Â· [Workspace](#workspace) Â· [Features](#features) Â· [Detection](#detection) Â· [Workflow](#workflow) Â· [Privacy](#privacy) Â· [Creator](#creator)
+[Start here](#start) &middot; [Workspace](#workspace) &middot; [Features](#features) &middot; [Detection](#detection) &middot; [Workflow](#workflow) &middot; [Privacy](#privacy) &middot; [Creator](#creator)
 
 </div>
 
 ---
 
----
-
 <a id="about"></a>
-## ðŸ›¡ï¸ A last check before you share
+## A last check before you share
 
-A useful troubleshooting log can also contain a password. An AI prompt can include a customerâ€™s email. A configuration note can accidentally reveal a token or private key.
+A useful troubleshooting log can also contain a password. An AI prompt can include a customer's email. A configuration note can accidentally reveal a token or private key.
 
 **File Privacy Checker helps you review that text in your browser, choose what to remove, and export a cleaner copy.** Automatic findings are a starting point; you can restore false positives and manually mark details the patterns miss.
 
@@ -38,44 +36,44 @@ A useful troubleshooting log can also contain a password. An AI prompt can inclu
 ---
 
 <a id="workspace"></a>
-## ðŸ–¥ï¸ Inside the workspace
+## Inside the workspace
 
 <div align="center">
 
-<img src="assests/workspace.png" width="100%" alt="File Privacy Checker workspace with original input, a redacted preview, category counts, and seven reviewed findings using fictional data" />
+<img src="https://github.com/lubaba1513-pixel/file-privacy-checker/blob/main/assests/workspace.png?raw=true" width="100%" alt="File Privacy Checker workspace with original input, a redacted preview, category counts, and seven reviewed findings using fictional data" />
 
-<sub><strong>Original text â†’ reviewed choices â†’ redacted copy</strong><br/>Actual development screenshot: six automatic findings and one manual selection, using fictional data.</sub>
+<sub><strong>Original text &rarr; reviewed choices &rarr; redacted copy</strong><br/>Actual development screenshot: six automatic findings and one manual selection, using fictional data.</sub>
 
 </div>
 
 ---
 
 <a id="features"></a>
-## âœ¨ Built for practical review
+## Built for practical review
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>ðŸ”Ž Find common sensitive patterns</h3>
+<h3>Find common sensitive patterns</h3>
 <p>Detect possible emails, phone numbers, labeled passwords and tokens, payment-card candidates, and complete private-key blocks.</p>
-<p><code>6 detectors</code> Â· <code>Grouped counts</code></p>
+<p><code>6 detectors</code> &middot; <code>Grouped counts</code></p>
 </td>
 <td width="50%" valign="top">
-<h3>â˜‘ï¸ Decide what stays</h3>
+<h3>Decide what stays</h3>
 <p>Use a checkbox for each occurrence, or choose <strong>Redact all</strong> and <strong>Keep all</strong>. Locate selects the original passage for closer review.</p>
-<p><code>Per-item choices</code> Â· <code>Locate</code> Â· <code>Bulk controls</code></p>
+<p><code>Per-item choices</code> &middot; <code>Locate</code> &middot; <code>Bulk controls</code></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<h3>âœï¸ Mark what patterns miss</h3>
+<h3>Mark what patterns miss</h3>
 <p>After checking, select an additional passage in the original input and mark it for replacement with <code>[REDACTED]</code>.</p>
-<p><code>Manual selection</code> Â· <code>[REDACTED]</code></p>
+<p><code>Manual selection</code> &middot; <code>[REDACTED]</code></p>
 </td>
 <td width="50%" valign="top">
-<h3>ðŸ“„ Compare and export</h3>
+<h3>Compare and export</h3>
 <p>Review source and preview side by side on wider screens, then copy the reviewed text or download a <code>.txt</code> file.</p>
-<p><code>Side-by-side preview</code> Â· <code>Copy</code> Â· <code>Download</code></p>
+<p><code>Side-by-side preview</code> &middot; <code>Copy</code> &middot; <code>Download</code></p>
 </td>
 </tr>
 </table>
@@ -83,9 +81,9 @@ A useful troubleshooting log can also contain a password. An AI prompt can inclu
 ---
 
 <a id="start"></a>
-## ðŸš€ Start in your browser
+## Start in your browser
 
-1. Choose **Code â†’ Download ZIP** on this repository and extract the folder.
+1. Choose **Code &rarr; Download ZIP** on this repository and extract the folder.
 2. Keep `index.html`, `style.css`, and `script.js` together.
 3. Open **index.html** in a current browser.
 4. Click **Try a fake example** to explore the tool.
@@ -100,20 +98,20 @@ A useful troubleshooting log can also contain a password. An AI prompt can inclu
 | **Export** | Read the complete preview, then copy or download `reviewed-copy.txt`. |
 
 > [!TIP]
-> Editing the input invalidates the previous review. Running a new check resets manual selections and checkbox choices. **Clear all** resets the applicationâ€™s input, preview, file selection, and findings.
+> Editing the input invalidates the previous review. Running a new check resets manual selections and checkbox choices. **Clear all** resets the application's input, preview, file selection, and findings.
 
 ---
 
 <a id="detection"></a>
-## ðŸ” What it looks for
+## What it looks for
 
 | Category | Supported pattern | Replacement |
 |---|---|---|
 | **Email** | Common email-address formats | `[EMAIL]` |
-| **Phone** | 10â€“15 digits with a leading `+` or a recognized preceding phone label | `[PHONE]` |
+| **Phone** | 10-15 digits with a leading `+` or a recognized preceding phone label | `[PHONE]` |
 | **Password** | Values labeled `password`, `passwd`, or `pwd` | `[PASSWORD]` |
 | **API key / token** | Values labeled API key, access token, or secret key in supported forms | `[SECRET]` |
-| **Payment card** | 13â€“19 digits passing a Luhn checksum; all-zero strings excluded | `[CARD]` |
+| **Payment card** | 13-19 digits passing a Luhn checksum; all-zero strings excluded | `[CARD]` |
 | **Private key** | Complete blocks with matching supported PEM private-key markers | `[PRIVATE KEY]` |
 | **Manual selection** | A nonempty passage you select after checking | `[REDACTED]` |
 
@@ -122,18 +120,18 @@ A useful troubleshooting log can also contain a password. An AI prompt can inclu
 
 Quoted credential values can contain spaces. Common quoted JSON labels are supported, but escaped quotes are not fully supported. A matching card checksum does not establish a real or active account, and matching private-key markers do not validate key contents.
 
-**Read the exact rules and limitations:** [Detection reference â†’](docs/detection.md)
+**Read the exact rules and limitations:** [Detection reference &rarr;](docs/detection.md)
 
 </details>
 
 ---
 
 <a id="workflow"></a>
-## âš™ï¸ From input to reviewed copy
+## From input to reviewed copy
 
 ### A small example, a useful difference
 
-| Original text â€” fictional values | Reviewed copy |
+| Original text  -  fictional values | Reviewed copy |
 |---|---|
 | `Contact: test@example.com` | `Contact: [EMAIL]` |
 | `password="Fake password"` | `password="[PASSWORD]"` |
@@ -143,14 +141,18 @@ Quoted credential values can contain spaces. Common quoted JSON labels are suppo
 ### The review flow
 
 ```mermaid
-flowchart TB
-    A["Pasted text or local .txt file"] --> B["Local pattern and checksum checks"]
-    B --> C["Review findings and mark extra passages"]
-    C --> D{"Redact this occurrence?"}
-    D -->|Yes| E["Insert its placeholder"]
-    D -->|No| F["Keep the original value"]
-    E --> G["Preview, copy, or download"]
-    F --> G
+flowchart LR
+    A["Local pattern checks"] --> B{"Your review"}
+    B -->|Redact| C["Placeholder"]
+    B -->|Keep| D["Original value"]
+    C --> E["Reviewed copy"]
+    D --> E
+    classDef source fill:#163F3A,stroke:#74B9A5,color:#FFFFFF;
+    classDef review fill:#403351,stroke:#BCA7D6,color:#FFFFFF;
+    classDef result fill:#243D46,stroke:#8EBAC7,color:#FFFFFF;
+    class A source;
+    class B review;
+    class C,D,E result;
 ```
 
 <details>
@@ -163,7 +165,7 @@ Findings retain their original character positions. Selected replacements run fr
 ---
 
 <a id="privacy"></a>
-## ðŸ§­ Privacy with clear boundaries
+## Privacy with clear boundaries
 
 <div align="center">
 
@@ -181,21 +183,21 @@ Findings retain their original character positions. Selected replacements run fr
 Original values remain in the input. Credentials, cards, keys, and manual values are hidden in finding descriptions, but **Locate** selects them in the original input. Unchecking a finding restores it in the output.
 
 > [!NOTE]
-> Loading a hosted application requests its page files from the host. Copying and downloading can leave data in clipboard history or local files. Browser extensions, host request logs, and device security are outside the applicationâ€™s control. This README also uses externally hosted decorative banners and badges; those images are separate from the application and do not receive the text you review.
+> Loading a hosted application requests its page files from the host. Copying and downloading can leave data in clipboard history or local files. Browser extensions, host request logs, and device security are outside the application's control. This README also uses externally hosted decorative banners and badges; those images are separate from the application and do not receive the text you review.
 
 **Current scope:** plain text only. No PDF, Word, image, or document-metadata inspection. Names, addresses, unlabeled credentials, unsupported phone formats, and incomplete private keys can be missed.
 
-[Privacy details and troubleshooting â†’](docs/privacy.md)
+[Privacy details and troubleshooting &rarr;](docs/privacy.md)
 
 ---
 
 <a id="validation"></a>
-## ðŸ§ª Test with fictional data
+## Test with fictional data
 
 Load [the final test file](samples/final-privacy-test.txt) and run a check:
 
 - Expect **six automatic findings**: email, phone, password, token, card, and private key.
-- Expect **3 credentials Â· 2 contact details Â· 1 payment card**.
+- Expect **3 credentials &middot; 2 contact details &middot; 1 payment card**.
 - The sample order number and ordinary paragraphs should stay intact.
 - Mark **Blue Orchid** manually to create the seventh finding.
 - Uncheck and recheck a finding, then compare copied and downloaded text with the preview.
@@ -214,41 +216,41 @@ node tests/privacy-checker.test.cjs
 
 No npm installation is needed. The tests execute the actual application against a simulated DOM, covering replacements, overlap handling, manual choices, exports, reset, file validation, file-read conflicts, and review controls. Native rendering, clipboard permissions, and download dialogs require separate browser checks.
 
-GitHub Actions configuration is provided for the same checks. Check the repositoryâ€™s **Actions** tab for its actual hosted status.
+GitHub Actions configuration is provided for the same checks. Check the repository's **Actions** tab for its actual hosted status.
 
 </details>
 
-[Full validation walkthrough â†’](docs/validation.md)
+[Full validation walkthrough &rarr;](docs/validation.md)
 
 ---
 
 <a id="documentation"></a>
-## ðŸ“š Explore the project
+## Explore the project
 
 | Resource | What you will find |
 |---|---|
-| [Application structure](index.html) Â· [Styles](style.css) Â· [Logic](script.js) | HTML, CSS, and vanilla JavaScript with no application runtime dependencies. |
+| [Application structure](index.html) &middot; [Styles](style.css) &middot; [Logic](script.js) | HTML, CSS, and vanilla JavaScript with no application runtime dependencies. |
 | [Detection](docs/detection.md) | Patterns, priority, overlaps, and replacements. |
-| [Validation](docs/validation.md) Â· [Sample](samples/final-privacy-test.txt) | Repeatable checks with fictional data. |
+| [Validation](docs/validation.md) &middot; [Sample](samples/final-privacy-test.txt) | Repeatable checks with fictional data. |
 | [Privacy](docs/privacy.md) | Data handling, limitations, and troubleshooting. |
-| [Contributing](CONTRIBUTING.md) Â· [Changelog](CHANGELOG.md) | Contribution guidance and implemented features. |
-| [Security reporting](SECURITY.md) Â· [Responsible use](ETHICS.md) | Report defects and handle sensitive material carefully. |
+| [Contributing](CONTRIBUTING.md) &middot; [Changelog](CHANGELOG.md) | Contribution guidance and implemented features. |
+| [Security reporting](SECURITY.md) &middot; [Responsible use](ETHICS.md) | Report defects and handle sensitive material carefully. |
 | [MIT license](LICENSE) | Reuse and modification terms, including commercial use with the notice retained. |
 
 ---
 
 <a id="creator"></a>
-## ðŸ‘©â€ðŸ’» Built by Lubaba
+## Built by Lubaba
 
 <div align="center">
 
 **[Lubaba Zafar](https://github.com/lubaba1513-pixel)**
 
-Cybersecurity project creator Â· File Privacy Checker
+Cybersecurity project creator &middot; File Privacy Checker
 
 <br/>
 
-**Built to make careful sharing easierâ€”one reviewed copy at a time.**
+**Built to make careful sharing easier - one reviewed copy at a time.**
 
 </div>
 
@@ -267,7 +269,7 @@ Have a useful improvement or a missed pattern? [Open an issue](https://github.co
 
 **Review the source. Choose what stays. Share the reviewed copy.**
 
-[Start here](#start) Â· [Documentation](#documentation) Â· [Back to top â†‘](#top)
+[Start here](#start) &middot; [Documentation](#documentation) &middot; [Back to top &uarr;](#top)
 
 </div>
 
