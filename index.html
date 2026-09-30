@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review and redact text locally before sharing logs, notes, or AI prompts.">
+  <title>File Privacy Checker — Review before you share</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">◈</span> File Privacy Checker <span class="version">v1.1</span></a>
+      <span class="local-badge"><span aria-hidden="true">●</span> Local browser processing</span>
+    </header>
+    <section class="intro" aria-labelledby="pageTitle">
+      <div><p class="eyebrow">YOUR LAST CHECK BEFORE SHARING</p><h1 id="pageTitle">Share the context.<br><span>Keep the sensitive details.</span></h1>
+      <p class="subtitle">Review logs, notes, and AI prompts. Find common sensitive patterns, choose what to remove, and export a cleaner copy.</p></div>
+      <button id="demoButton" title="Replace the input with fake example text" class="secondary" type="button">Try a fake example <span aria-hidden="true">↗</span></button>
+    </section>
+    <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">◈</span><p><strong>Your text stays in this browser.</strong> No uploads or accounts. Pattern checks can miss sensitive details—always review the full result.</p></div>
+    <section class="workspace" aria-label="Text review workspace">
+      <div class="panel source-panel">
+        <div class="panel-heading"><div><span class="step">01 / INPUT</span><h2><label for="inputText">Original text</label></h2></div><button id="clearButton" class="quiet" type="button">Clear all</button></div>
+        <textarea id="inputText" rows="15" spellcheck="false" placeholder="Paste a log, note, or AI prompt here…" aria-describedby="inputHelp"></textarea>
+        <div class="file-row"><label for="fileInput">Or load a .txt file</label><span>Up to 1 MiB</span></div>
+        <input id="fileInput" type="file" accept=".txt,text/plain">
+        <div class="actions"><button id="checkButton" type="button">Check for sensitive information</button><button id="markButton" class="secondary" type="button">Mark selected text</button></div>
+        <p id="inputHelp" class="hint">Check first, then select text above to mark an extra item. Checking again resets manual selections.</p>
+      </div>
+      <div class="panel output-panel">
+        <div class="panel-heading"><div><span class="step">02 / PREVIEW</span><h2><label for="redactedText">Redacted copy</label></h2></div><span id="outputState" class="state">Awaiting review</span></div>
+        <textarea id="redactedText" rows="15" readonly spellcheck="false" placeholder="Your reviewed copy will appear here…" aria-describedby="outputHelp"></textarea>
+        <div class="actions export-actions"><button id="copyButton" type="button" disabled>Copy redacted text</button><button id="downloadButton" class="secondary" type="button" disabled>Download .txt <span aria-hidden="true">↓</span></button></div>
+        <p id="outputHelp" class="hint">Unchecked findings stay in the copy. Review the entire output before you share.</p>
+      </div>
+    </section>
+    <section class="results-panel" aria-labelledby="findingsTitle">
+      <div class="results-heading"><div><span class="step">03 / REVIEW</span><h2 id="findingsTitle">Findings at a glance</h2></div><span class="pattern-note">Pattern-based detection</span></div>
+      <div id="findings" role="status" aria-live="polite">Paste text or try the fake example to begin.</div>
+      <div id="summary" class="summary" hidden aria-label="Finding counts"></div>
+      <section id="reviewSection" hidden aria-labelledby="reviewTitle">
+        <div class="review-heading"><div><h3 id="reviewTitle">Choose what to redact</h3><p class="hint">Checked items are removed. Use “Locate” to select the original text.</p></div><div class="bulk-actions"><button id="selectAllButton" class="quiet" type="button">Redact all</button><button id="deselectAllButton" class="quiet" type="button">Keep all</button></div></div>
+        <div id="reviewList"></div>
+      </section>
+    </section>
+    <footer><span>Created by Lubaba Zafar · Built for thoughtful sharing.</span></span><span>Emails · Phones · Passwords · Tokens · Cards · Private keys</span></footer>
+  </main>
+</body>
+</html>
