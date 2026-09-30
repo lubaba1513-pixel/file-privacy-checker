@@ -8,6 +8,8 @@
 
 Keep the useful context. Protect passwords, keys, and personal details.
 
+[Open File Privacy Checker](https://lubaba1513-pixel.github.io/file-privacy-checker/)
+
 **A browser workspace for reviewing logs, notes, and AI prompts before sharing them.**
 
 ![Processing](https://img.shields.io/badge/Processing-Local%20Browser-1C6558?style=for-the-badge)
