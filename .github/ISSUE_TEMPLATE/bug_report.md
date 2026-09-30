@@ -13,7 +13,7 @@ Use fictional data only. Never include real passwords, keys, tokens, or personal
 
 ## Steps to reproduce
 
-## Browser and application version
+## Browser and operating system
 
 ## Screenshot (optional; fictional data only)
 
