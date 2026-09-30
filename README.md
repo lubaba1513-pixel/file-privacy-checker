@@ -1,191 +1,175 @@
 <a id="top"></a>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:163F3A,100:6A5689&height=220&section=header&text=File%20Privacy%20Checker&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Review%20locally.%20Redact%20thoughtfully.%20Share%20with%20care.&descSize=17&descAlignY=58" width="100%" alt="File Privacy Checker — Review locally. Redact thoughtfully. Share with care." />
 
 <div align="center">
 
-# ◈ File Privacy Checker
-
-### Share the context. Keep the sensitive details.
-
-Review and redact logs, notes, and AI prompts **locally in your browser**.
-
-**Six automatic detectors · Manual redaction · No backend**
-
-Created by **[Lubaba](https://github.com/lubaba1513-pixel)**
-
-[Quick start](#-quick-start) · [Workspace](#-review-workspace) · [Detection](#-what-it-detects) · [Validation](#-validation) · [Privacy](#-privacy-and-boundaries)
-
+Keep the context. Protect the sensitive details.
+A browser workspace for reviewing logs, notes, and AI prompts before sharing them.
+ 
+ 
+ 
+ 
+Six automatic detectors · Manual redaction · Copy and download · No backend
+Start here · Workspace · Features · Detection · Workflow · Privacy · Creator
 </div>
 
----
+<a id="about"></a>
+🛡️ A last check before you share
+A useful troubleshooting log can also contain a password. An AI prompt can include a customer’s email. A configuration note can accidentally reveal a token or private key.
+File Privacy Checker helps you review that text in your browser, choose what to remove, and export a cleaner copy. Automatic findings are a starting point; you can restore false positives and manually mark details the patterns miss.
+[!IMPORTANT]
+No findings does not mean no sensitive information. Review the entire output before sharing. This tool uses patterns and a checksum; it does not understand every context or certify that text is safe.
 
-## ✦ Why this tool exists
+<a id="workspace"></a>
+🖥️ Inside the workspace
+<div align="center">
 
-A support log, troubleshooting note, or AI prompt can carry more than its intended context: a password, token, contact detail, or private key may be included by accident.
+<img src="assests/workspace.png" width="100%" alt="File Privacy Checker workspace with original input, a redacted preview, category counts, and seven reviewed findings using fictional data" />
 
-File Privacy Checker helps you inspect text before sharing it. It finds common patterns, creates a redacted copy, and leaves the final decision with you. You can restore a false positive or manually redact something the detectors missed.
+<sub><strong>Original text → reviewed choices → redacted copy</strong>
+Actual development screenshot: six automatic findings and one manual selection, using fictional data.</sub>
+</div>
 
-> **A review aid, not a safety verdict.** A clean findings list does not prove that the text contains no sensitive information.
+<a id="features"></a>
+✨ Built for practical review
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>🔎 Find common sensitive patterns</h3>
+<p>Detect possible emails, phone numbers, labeled passwords and tokens, payment-card candidates, and complete private-key blocks.</p>
+<p><strong>Know what was found.</strong> Grouped counts summarize credentials, contact details, cards, and manual selections.</p>
+</td>
+<td width="50%" valign="top">
+<h3>☑️ Decide what stays</h3>
+<p>Use a checkbox for each occurrence, or choose <strong>Redact all</strong> and <strong>Keep all</strong>. Locate selects the original passage for closer review.</p>
+<p><strong>Your judgment controls the copy.</strong> Unchecked findings remain in the exported text.</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>✍️ Mark what patterns miss</h3>
+<p>After checking, select an additional passage in the original input and mark it for replacement with <code>[REDACTED]</code>.</p>
+<p><strong>Review beyond the detector.</strong> Names, internal notes, and other context-sensitive details may need manual attention.</p>
+</td>
+<td width="50%" valign="top">
+<h3>📄 Compare and export</h3>
+<p>Review source and preview side by side on wider screens, then copy the reviewed text or download a <code>.txt</code> file.</p>
+<p><strong>A visible result before export.</strong> Editing the input clears the previous review and disables exports until another check.</p>
+</td>
+</tr>
+</table>
 
-## 🖥️ Review workspace
+<a id="start"></a>
+🚀 Start in your browser
+1. Choose Code → Download ZIP on this repository and extract the folder.
+2. Keep index.html, style.css, and script.js together.
+3. Open index.html in a current browser.
+4. Click Try a fake example to explore the tool.
+No installation, account, API key, or AWS setup is needed to use the application. The demo replaces the current input with fictional text.
+Step	What to do
+Input	Paste text or load a UTF-8 .txt file up to 1 MiB (1,048,576 bytes).
+Check	Run the check and inspect the findings and original text.
+Review	Choose which occurrences to redact; manually mark any extra passage.
+Export	Read the complete preview, then copy or download reviewed-copy.txt.
 
-![File Privacy Checker showing seven reviewed findings and a redacted preview](assets/workspace.png)
 
-*Actual test screenshot using fake values: six automatic findings and one manual selection.*
+[!TIP]
+Editing the input invalidates the previous review. Running a new check resets manual selections and checkbox choices. Clear all resets the application’s input, preview, file selection, and findings.
 
-| Control | What it helps you do |
-| --- | --- |
-| Original text + redacted copy | Compare source and output side by side on wider screens. |
-| Finding counts | See detected occurrences grouped as credentials, contact details, payment cards, and manual selections. |
-| Per-item checkbox | Remove a finding or restore its original value. |
-| Locate | Select the occurrence in the original input, including values hidden in the review list. |
-| Redact all / Keep all | Apply one choice to every finding. |
-| Mark selected text | Redact an extra passage that automatic detection missed. |
-| Try a fake example | Replace current input with a demonstration and run a check. |
-| Copy / Download | Export the current reviewed copy. |
+<a id="detection"></a>
+🔐 What it looks for
+Category	Supported pattern	Replacement
+Email	Common email-address formats	[EMAIL]
+Phone	10–15 digits with a leading + or a recognized preceding phone label	[PHONE]
+Password	Values labeled password, passwd, or pwd	[PASSWORD]
+API key / token	Values labeled API key, access token, or secret key in supported forms	[SECRET]
+Payment card	13–19 digits passing a Luhn checksum; all-zero strings excluded	[CARD]
+Private key	Complete blocks with matching supported PEM private-key markers	[PRIVATE KEY]
+Manual selection	A nonempty passage you select after checking	[REDACTED]
 
-Counts include unchecked findings. The preview badge reports how many occurrences are selected for removal. Narrow screens stack the two text panels.
 
-## 🚀 Quick start
-
-### Run locally
-
-1. Download the repository ZIP using **Code → Download ZIP**, then extract it.
-2. Keep `index.html`, `style.css`, and `script.js` in the same folder.
-3. Open `index.html` in a current browser.
-4. Click **Try a fake example** to explore the workflow.
-
-**No package installation, API key, account, or AWS service is needed.**
-
-### Review your own text
-
-1. Paste text or load a UTF-8 `.txt` file up to **1 MiB** (1,048,576 bytes).
-2. Click **Check for sensitive information**.
-3. Review each finding. Checked items are removed; unchecked items remain.
-4. Select any additional passage in the original input and click **Mark selected text**.
-5. Review the entire output before copying or downloading `reviewed-copy.txt`.
-
-Editing the input clears the old review. Running a new check resets manual selections and checkbox choices. **Clear all** resets the page.
-
-## 🔎 What it detects
-
-| Category | Detection rule | Replacement | Important boundary |
-| --- | --- | --- | --- |
-| Email | Common email address patterns | `[EMAIL]` | Unusual address formats may be missed. |
-| Phone | 10–15 digits, beginning with `+` or following a recognized phone label | `[PHONE]` | Unlabeled local numbers may be missed. |
-| Password | Values labeled `password`, `passwd`, or `pwd` | `[PASSWORD]` | Unlabeled or unusual formats may be missed. |
-| API key / token | Values labeled API key, access token, or secret key | `[SECRET]` | Does not validate a provider or recognize every token format. |
-| Payment card | 13–19 digits passing a Luhn checksum, excluding all-zero strings | `[CARD]` | A checksum does not prove that a card is real or active. |
-| Private key | Complete matching PEM private key markers | `[PRIVATE KEY]` | Incomplete or differently formatted blocks may be missed. |
-| Manual selection | A passage you select after checking | `[REDACTED]` | Overlaps with an existing finding are rejected. |
-
-Quoted password and token values can contain spaces. Common quoted JSON labels are supported. Credentials, cards, private keys, and manual values are hidden in the finding descriptions; originals remain visible in the input box.
-
-[Read the detection details →](docs/detection.md)
-
-## ⚙️ How it works
-
-All detection and replacement happen in the page's JavaScript. Each finding records its original character positions. Redaction works backwards through those positions so replacing one value does not shift an earlier finding.
-
+Quoted credential values can contain spaces. Common quoted JSON labels are supported, but escaped quotes are not fully supported. A matching card checksum does not establish a real or active account, and matching private-key markers do not validate key contents.
+Read the exact rules and limitations: [Detection reference →](docs/detection.md)
+<a id="workflow"></a>
+⚙️ From input to reviewed copy
 ```mermaid
 flowchart TB
-    A["Pasted text or local .txt file"] --> B["Local pattern checks"]
-    B --> C["Human review and manual selections"]
-    C -->|Checked finding| D["Replace with a placeholder"]
-    C -->|Unchecked finding| E["Keep the original value"]
-    D --> F["Reviewed preview, copy, or download"]
-    E --> F
+    A["Pasted text or local .txt file"] --> B["Local pattern and checksum checks"]
+    B --> C["Review findings and mark extra passages"]
+    C --> D{"Redact this occurrence?"}
+    D -->|Yes| E["Insert its placeholder"]
+    D -->|No| F["Keep the original value"]
+    E --> G["Preview, copy, or download"]
+    F --> G
 ```
+Findings retain their original character positions. Selected replacements run from the end of the text towards the beginning, preserving earlier positions. Overlapping automatic findings keep the first accepted detection; private-key and labeled-credential checks run first. Manual selections cannot overlap an existing finding.
+<a id="privacy"></a>
+🧭 Privacy with clear boundaries
+<div align="center">
 
-Automatic overlaps keep the first accepted finding; private key and labeled credential checks precede contact checks. The review controls determine what appears in the exported copy.
+Local processing. Visible choices. Human review.
+</div>
 
-## ✅ Validation
+Principle	What the application does
+Process locally	Checks entered text in browser memory, with no upload endpoint or remote analysis service.
+Keep decisions visible	Shows the original input, selected findings, and current output.
+Avoid application persistence	Does not save entered text in local storage or a database.
+Explain the limits	Documents missed formats, false positives, and the need for manual review.
 
-The interface and core workflow were tested using **fictional data** during development. The creator confirmed the combined browser test and final file test passed. These results cover the exercised samples, not every possible input or browser.
 
-| Check | Observed result |
-| --- | --- |
-| Combined automatic detection | Six expected findings were redacted. |
-| Normal text and order number | Normal text stayed intact; the sample order number was unchanged. |
-| Manual selection | An extra marked passage became `[REDACTED]`; the count increased to seven. |
-| Checkbox review | Unchecking restored a value; checking redacted it again. |
-| Export | The tested downloaded copy matched the preview. |
-| Updated interface | Side-by-side panels, summary counts, and reviewed output were checked in the supplied screenshot. |
+Original values remain in the input. Credentials, cards, keys, and manual values are hidden in finding descriptions, but Locate selects them in the original input. Unchecking a finding restores it in the output.
+[!NOTE]
+Loading a hosted application requests its page files from the host. Copying and downloading can leave data in clipboard history or local files. Browser extensions, host request logs, and device security are outside the application’s control. This README also uses externally hosted decorative banners and badges; those images are separate from the application and do not receive the text you review.
 
-JavaScript syntax and simulated-DOM checks also covered quoted credentials, bulk choices, locating a finding, input invalidation, file validation, and pending file-read conflicts. Simulated-DOM checks do not substitute for browser rendering tests.
-
-**Reproduce the final test:** load [the fake test file](samples/final-privacy-test.txt), run a check, and expect six findings. Mark **Blue Orchid** manually to create the seventh.
-
-[Full validation procedure and expected output →](docs/validation.md)
-
-## 🔐 Privacy and boundaries
-
-| Area | Behavior |
-| --- | --- |
-| Processing | Runs locally in browser memory. |
-| Application uploads | No text upload or remote detection service. |
-| Accounts and analytics | No sign-in or application analytics. |
-| Browser storage | The application does not persist input in local storage or a database. |
-| Copy | Places reviewed output on the system clipboard. |
-| Download | Saves reviewed output as a file on your device. |
-
-Opening a hosted page still requests its HTML, CSS, and JavaScript from the host. The application does not send your entered text as part of its review workflow. Browser extensions, clipboard history, and device security are outside the tool's control.
-
-**Current limits:** plain text only; no PDF, Word, image, or metadata inspection. Names, addresses, unlabeled credentials, escaped quoted values, unsupported phone formats, and incomplete private keys can be missed. Unrelated identifiers can resemble card numbers.
-
+Current scope: plain text only. No PDF, Word, image, or document-metadata inspection. Names, addresses, unlabeled credentials, unsupported phone formats, and incomplete private keys can be missed.
 [Privacy details and troubleshooting →](docs/privacy.md)
+<a id="validation"></a>
+🧪 Test with fictional data
+Load [the final test file](samples/final-privacy-test.txt) and run a check:
+- Expect six automatic findings: email, phone, password, token, card, and private key.
+- Expect 3 credentials · 2 contact details · 1 payment card.
+- The sample order number and ordinary paragraphs should stay intact.
+- Mark Blue Orchid manually to create the seventh finding.
+- Uncheck and recheck a finding, then compare copied and downloaded text with the preview.
+The creator completed the development browser workflow and final sample-file checks. JavaScript syntax and simulated-DOM regression checks also passed during review. These checks cover exercised examples; they do not establish exhaustive detection, native-browser compatibility, or an independent security audit.
+<details>
+<summary><strong>Run automated development checks</strong></summary>
 
-## 🧠 AI-assisted development
-
-AI assisted with implementation guidance, troubleshooting, interface refinement, code review, and documentation. Lubaba performed the browser checks and final sample-file validation.
-
-The running tool uses **JavaScript pattern matching and a Luhn checksum**. It does not call an AI model, infer meaning from text, or send content to an AI service. Manual review remains part of the workflow.
-
-## 📂 Repository guide
-
-| File or folder | Purpose |
-| --- | --- |
-| [`index.html`](index.html) | Page structure, controls, and accessibility labels. |
-| [`style.css`](style.css) | Responsive layout and visual design. |
-| [`script.js`](script.js) | Detection, review state, redaction, local file loading, and export. |
-| [`assets/workspace.png`](assets/workspace.png) | Actual interface test screenshot. |
-| [`samples/final-privacy-test.txt`](samples/final-privacy-test.txt) | Fictional data for repeatable manual testing. |
-| [`docs/detection.md`](docs/detection.md) | Supported patterns and overlap behavior. |
-| [`docs/validation.md`](docs/validation.md) | Test procedure and expected results. |
-| [`docs/privacy.md`](docs/privacy.md) | Data handling, limitations, and troubleshooting. |
-| [`tests/privacy-checker.test.cjs`](tests/privacy-checker.test.cjs) | Runnable simulated-DOM regression checks. |
-| [`.github/workflows/checks.yml`](.github/workflows/checks.yml) | Prepared syntax and regression CI workflow. |
-
-**Stack:** HTML · CSS · Vanilla JavaScript · Browser APIs. No runtime dependencies. Node.js is needed only for the optional automated development checks.
-
-## 🧪 Automated regression checks
-
-For contributors with Node.js 22 or newer:
-
-```sh
+With Node.js 22 or newer, run from the repository folder:
 node --check script.js
 node tests/privacy-checker.test.cjs
-```
+No npm installation is needed. The tests execute the actual application against a simulated DOM, covering replacements, overlap handling, manual choices, exports, reset, file validation, file-read conflicts, and review controls. Native rendering, clipboard permissions, and download dialogs require separate browser checks.
+GitHub Actions configuration is provided for the same checks. Check the repository’s Actions tab for its actual hosted status.
+</details>
 
-No npm install is needed. The regression script runs the actual JavaScript against a simulated DOM. A prepared [GitHub Actions workflow](.github/workflows/checks.yml) runs the same checks on pushes and pull requests. Hosted CI status must be confirmed after uploading it; these checks do not validate native browser rendering or permissions.
+[Full validation walkthrough →](docs/validation.md)
+<a id="documentation"></a>
+📚 Explore the project
+Resource	What you will find
+[Application structure](index.html) · [Styles](style.css) · [Logic](script.js)	HTML, CSS, and vanilla JavaScript with no application runtime dependencies.
+[Detection](docs/detection.md)	Patterns, priority, overlaps, and replacements.
+[Validation](docs/validation.md) · [Sample](samples/final-privacy-test.txt)	Repeatable checks with fictional data.
+[Privacy](docs/privacy.md)	Data handling, limitations, and troubleshooting.
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)	Contribution guidance and implemented features.
+[Security reporting](SECURITY.md) · [Responsible use](ETHICS.md)	Report defects and handle sensitive material carefully.
+MIT license	Reuse and modification terms, including commercial use with the notice retained.
 
-## 🤝 Responsible use and project policies
 
-| Document | Purpose |
-| --- | --- |
-| [MIT license](LICENSE) | Permits reuse and modification, including commercial use, with the license notice retained. |
-| [Responsible use](ETHICS.md) | Privacy-conscious handling, fictional examples, and honest sharing. |
-| [Security reporting](SECURITY.md) | How to report defects without exposing sensitive information. |
-| [Contributing](CONTRIBUTING.md) | Setup, regression checks, and focused contributions. |
-| [Changelog](CHANGELOG.md) | Implemented changes and repository preparation status. |
+<a id="creator"></a>
+👩‍💻 Built by Lubaba
+<div align="center">
 
-Responsible-use guidance does not modify the MIT license. This project makes no independent security-audit, certification, or complete-detection claim.
+Lubaba Zafar
+Cybersecurity project creator · File Privacy Checker
+Built to make careful sharing easier—one reviewed copy at a time.
+</div>
 
-## 💬 Feedback
+AI assisted with implementation guidance, troubleshooting, interface refinement, code review, and documentation. Lubaba performed the browser checks and final sample-file validation. The running application uses JavaScript patterns and a checksum; it does not call an AI model or send entered content to an AI service.
+Have a useful improvement or a missed pattern? Open an issue with a minimal fictional example. Follow [SECURITY.md](SECURITY.md) for security-sensitive reports. Never include real credentials or personal data in public reports.
+<div align="center">
 
-Found a missed pattern or false positive? [Open an issue](https://github.com/lubaba1513-pixel/file-privacy-checker/issues) with a minimal **fake example**, the expected result, actual result, and browser version. Do not include real passwords, tokens, private keys, or personal data.
+Review the source. Choose what stays. Share the reviewed copy.
+Start here · Documentation · Back to top ↑
+</div>
 
----
-
-**Created by [Lubaba](https://github.com/lubaba1513-pixel)** · Review before you share.
-
-[Back to top ↑](#top)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A5689,100:163F3A&height=100&section=footer" width="100%" alt="File Privacy Checker footer" />
