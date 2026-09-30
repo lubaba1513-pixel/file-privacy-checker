@@ -8,7 +8,7 @@
 
 Review and redact logs, notes, and AI prompts **locally in your browser**.
 
-**v1.1 · Six automatic detectors · Manual redaction · No backend**
+** Six automatic detectors · Manual redaction · No backend**
 
 Created by **[Lubaba](https://github.com/lubaba1513-pixel)**
 
@@ -30,7 +30,7 @@ File Privacy Checker helps you inspect text before sharing it. It finds common p
 
 ![File Privacy Checker showing seven reviewed findings and a redacted preview](assets/workspace.png)
 
-*Actual v1.1 test screenshot using fake values: six automatic findings and one manual selection.*
+*Actual test screenshot using fake values: six automatic findings and one manual selection.*
 
 | Control | What it helps you do |
 | --- | --- |
@@ -100,7 +100,7 @@ Automatic overlaps keep the first accepted finding; private key and labeled cred
 
 ## ✅ Validation
 
-The v1.1 interface and core workflow were tested using **fictional data** during development. The creator confirmed the combined browser test and final file test passed. These results cover the exercised samples, not every possible input or browser.
+The interface and core workflow were tested using **fictional data** during development. The creator confirmed the combined browser test and final file test passed. These results cover the exercised samples, not every possible input or browser.
 
 | Check | Observed result |
 | --- | --- |
