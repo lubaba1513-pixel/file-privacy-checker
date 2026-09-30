@@ -12,7 +12,7 @@ Use the repository's **Security → Report a vulnerability** option if private v
 
 If the private option is unavailable, open a public issue only to request a private reporting channel. Do not include vulnerability details, reproduction material, real credentials, or personal information in that request.
 
-For a private report, include the affected file or feature, browser minimal fake reproduction, expected behavior, observed behavior, and potential impact. Test only local copies and systems you are authorized to assess.
+For a private report, include the affected file or feature, browser, minimal fake reproduction, expected behavior, observed behavior, and potential impact. Test only local copies and systems you are authorized to assess.
 
 ## Expectations
 
