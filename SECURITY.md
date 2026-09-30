@@ -2,7 +2,7 @@
 
 ## Scope
 
-The current release line is v1.1. Security-related reports about the browser application are welcome, including unexpected data transmission, content rendering problems, incorrect state handling, and unintended inclusion of selected values in exports.
+Security reports apply to the current code on the main branch. Security-related reports about the browser application are welcome, including unexpected data transmission, content rendering problems, incorrect state handling, and unintended inclusion of selected values in exports.
 
 Known detection limits are documented in [detection.md](docs/detection.md). A missed format can be an ordinary bug or feature request; a defect that exposes reviewed text or breaks an expected privacy boundary deserves security review.
 
@@ -12,7 +12,7 @@ Use the repository's **Security → Report a vulnerability** option if private v
 
 If the private option is unavailable, open a public issue only to request a private reporting channel. Do not include vulnerability details, reproduction material, real credentials, or personal information in that request.
 
-For a private report, include the affected version, browser, minimal fake reproduction, expected behavior, observed behavior, and potential impact. Test only local copies and systems you are authorized to assess.
+For a private report, include the affected file or feature, browser minimal fake reproduction, expected behavior, observed behavior, and potential impact. Test only local copies and systems you are authorized to assess.
 
 ## Expectations
 
