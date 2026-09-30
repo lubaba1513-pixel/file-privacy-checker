@@ -8,7 +8,7 @@
 
 Review and redact logs, notes, and AI prompts **locally in your browser**.
 
-** Six automatic detectors · Manual redaction · No backend**
+**Six automatic detectors · Manual redaction · No backend**
 
 Created by **[Lubaba](https://github.com/lubaba1513-pixel)**
 
