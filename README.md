@@ -40,7 +40,7 @@ A useful troubleshooting log can also contain a password. An AI prompt can inclu
 
 <div align="center">
 
-<img src="https://github.com/lubaba1513-pixel/file-privacy-checker/blob/main/assests/workspace.png?raw=true" width="100%" alt="File Privacy Checker workspace with original input, a redacted preview, category counts, and seven reviewed findings using fictional data" />
+<img src="https://github.com/lubaba1513-pixel/file-privacy-checker/blob/main/assets/workspace.png?raw=true" width="100%" alt="File Privacy Checker workspace with original input, a redacted preview, category counts, and seven reviewed findings using fictional data" />
 
 <sub><strong>Original text &rarr; reviewed choices &rarr; redacted copy</strong><br/>Actual development screenshot: six automatic findings and one manual selection, using fictional data.</sub>
 
